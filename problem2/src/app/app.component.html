@@ -1,0 +1,22 @@
+<style>
+  #input:invalid {
+    border: solid #F00 2px;
+  }
+</style>
+<h1><slot name="label">Label default text</slot></h1>
+<form name="validationFrom" form="ngForm">
+<div><input type="text" [ngClass]="errorFlag? 'error': ''" id="input" #ref (change)="check()" name="el" [(ngModel)]="inputEl"/></div>
+<div>
+
+  <label>
+    <input type="radio" (click)="setValidationType('number')" name="validation-type" checked value="number"/> Numbers
+  </label>
+  <label>
+    <input type="radio" (click)="setValidationType('letter')"  name="validation-type" value="letter"/> Letters
+  </label>
+  <label>
+    <input type="radio" (click)="setValidationType('password')"  name="validation-type" value="password"/> Password
+  </label>  
+
+</div>
+</form>
