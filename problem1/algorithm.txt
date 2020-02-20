@@ -1,0 +1,15 @@
+Our approach to solve this problem.
+
+Considering there are 10 floors in a building and each room has 10 rooms (100 rooms in entire building)
+First we identify the starting(i.e x0,y0) and end position(i.e x1, y1) of the building.
+Based on the instructions we recieve from each move (U,R,UR,DR, UL,DL),  we calculate the next move of the batman 
+by moving in that direction by one step.
+Since there is a restriction in place that with in the given number of steps he needs to reach the loaction.
+We need to optimise the solution,
+We considered binary search approach to solve this problem.
+exactly dividing the building space in to half, then ignoring the either part based on the information we recieve on each move,
+we continue this process till he reaches the destination.
+Thus reducing the complexity to O(logN)	
+
+
+
